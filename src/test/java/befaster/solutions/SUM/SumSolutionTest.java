@@ -21,9 +21,15 @@ public class SumSolutionTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void validate_params() {
+    public void validate_summand1() {
         sum.compute(234,3);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void validate_summand2() {
+        sum.compute(5,345);
+    }
 }
+
 
 
