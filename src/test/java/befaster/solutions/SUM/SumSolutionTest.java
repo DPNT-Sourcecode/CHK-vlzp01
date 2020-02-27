@@ -19,4 +19,10 @@ public class SumSolutionTest {
     public void compute_sum() {
         assertThat(sum.compute(1, 1), equalTo(2));
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void validate_params() {
+        assertThat(sum.compute(234,305), equalTo(539));
+    }
 }
+
