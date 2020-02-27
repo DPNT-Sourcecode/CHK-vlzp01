@@ -22,7 +22,8 @@ public class SumSolutionTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void validate_params() {
-        assertThat(sum.compute(234,305), equalTo(539));
+        sum.compute(234,3);
     }
 }
+
 
