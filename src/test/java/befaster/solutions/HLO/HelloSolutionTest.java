@@ -10,9 +10,11 @@ public class HelloSolutionTest {
     @Test
     public void hello(){
         HelloSolution helloSolution = new HelloSolution();
-        assertThat(helloSolution.hello("some name"),equalTo("Hello, World!"));
+        assertThat(helloSolution.hello("some name"),equalTo("Hello, some name!"));
+        assertThat(helloSolution.hello(" some name "),equalTo("Hello, some name!"));
     }
 }
+
 
 
 
