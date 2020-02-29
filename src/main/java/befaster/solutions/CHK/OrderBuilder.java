@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class OrderBuilder {
 
     public static Optional<Order> createOrder(String skus) {
-        if(Strings.isNullOrEmpty(skus)) return Optional.empty();
         Multiset<Character> productSet = HashMultiset.create();
         productSet.addAll(Lists.charactersOf(skus));
         try {
@@ -31,3 +30,4 @@ public class OrderBuilder {
 
     }
 }
+
