@@ -7,13 +7,15 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Multiset;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CheckoutSolution {
 
     public Integer checkout(String skus) {
-        Order order = OrderBuilder.createOrder(skus);
-        return order.totalValue();
+        Optional<Order> order = OrderBuilder.createOrder(skus);
+        return order.ifPresent() ? order.get().totalValue() : -1;
     }
 }
+
 
