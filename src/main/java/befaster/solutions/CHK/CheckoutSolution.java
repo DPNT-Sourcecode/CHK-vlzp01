@@ -17,6 +17,3 @@ public class CheckoutSolution {
         return order.totalValue();
     }
 }
-
-
-

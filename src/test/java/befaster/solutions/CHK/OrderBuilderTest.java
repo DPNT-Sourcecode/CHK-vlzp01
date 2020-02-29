@@ -12,18 +12,18 @@ public class OrderBuilderTest {
     public void buildOrder() {
         Order order = OrderBuilder.createOrder("AA");
         assertThat(order.getProducts(), hasSize(1));
-        assertThat(order.getProducts().get(0).getSkuItem(), equalTo(SKUItem.A));
+        assertThat(order.getProducts().iterator().next().getSkuItem(), equalTo(SKUItem.A));
     }
 
     @Test
     public void buildCompositeOrder() {
         Order order = OrderBuilder.createOrder("AABADDCCC");
         assertThat(order.getProducts(), hasSize(4));
-        //assertThat(order.getProducts().get(0).getSkuItem(), equalTo(SKUItem.A));
+        Product productA = order.getProducts().stream()
+                    .filter(product -> product.getSkuItem().equals(SKUItem.A))
+                    .findFirst().get();
+        assertThat(productA.getQuantity(), equalTo(3));
     }
 
 
 }
-
-
-

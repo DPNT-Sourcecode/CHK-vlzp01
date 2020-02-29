@@ -1,16 +1,17 @@
 package befaster.solutions.CHK;
 
 import java.util.List;
+import java.util.Set;
 
 public class Order {
 
-    private List<Product> products;
+    private Set<Product> products;
 
-    public Order(List<Product> products) {
+    public Order(Set<Product> products) {
         this.products = products;
     }
 
-    public List<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 
@@ -20,5 +21,3 @@ public class Order {
                 .sum();
     }
 }
-
-
