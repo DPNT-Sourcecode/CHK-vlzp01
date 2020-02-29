@@ -3,6 +3,7 @@ package befaster.solutions.CHK;
 import befaster.solutions.CHK.pricing.Product2DFreeBOffer;
 import org.junit.Test;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -25,4 +26,16 @@ public class Product2DFreeBOfferTest {
         assertThat(productB.getQuantity(), equalTo(3));
     }
 
+    @Test
+    public void applyOfferRemoveProductB() {
+        Set<Product> products = Stream.of(new Product(SKUItem.E,4),
+                new Product(SKUItem.B,2)).collect(Collectors.toSet());
+        offer.apply(products);
+        Optional<Product> productB = products.stream()
+                .filter(product -> product.getSkuItem().equals(SKUItem.B))
+                .findFirst();
+        assertThat(productB.isPresent(), equalTo(false));
+    }
+
 }
+
