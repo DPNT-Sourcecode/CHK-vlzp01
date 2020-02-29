@@ -7,5 +7,3 @@ public class RegularPricingStrategy implements PricingStrategy {
         return quantity * price;
     }
 }
-
-

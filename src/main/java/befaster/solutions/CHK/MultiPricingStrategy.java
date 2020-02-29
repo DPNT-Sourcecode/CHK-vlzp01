@@ -23,6 +23,3 @@ public class MultiPricingStrategy implements PricingStrategy {
         return totalPrice + strategy.priceOf(quantity,price);
     }
 }
-
-
-

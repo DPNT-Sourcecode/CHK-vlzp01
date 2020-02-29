@@ -8,5 +8,3 @@ public class PriceCalculator {
         return 0;
     }
 }
-
-
