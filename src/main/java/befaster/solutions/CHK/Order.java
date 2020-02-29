@@ -21,4 +21,3 @@ public class Order {
         return new PriceCalculator().totalPrice(new HashSet<>(products));
     }
 }
-
