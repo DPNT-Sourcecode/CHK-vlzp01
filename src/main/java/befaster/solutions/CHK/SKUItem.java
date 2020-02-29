@@ -7,7 +7,8 @@ public enum SKUItem {
     B("B",30),
     C("C",20),
     D("D",15),
-    E("E",40);
+    E("E",40),
+    F("F",10);
 
     private String name;
     private Integer price;
@@ -34,3 +35,4 @@ public enum SKUItem {
         return price;
     }
 }
+
