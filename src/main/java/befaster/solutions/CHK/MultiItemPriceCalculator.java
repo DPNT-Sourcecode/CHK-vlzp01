@@ -1,6 +1,6 @@
 package befaster.solutions.CHK;
 
-public class MultiPricingStrategy implements PriceStrategy {
+public class MultiPricingStrategy implements PricingStrategy {
 
     @Override
     public int priceOf(Product product) {
@@ -18,4 +18,5 @@ public class MultiPricingStrategy implements PriceStrategy {
         return PriceCalculator.super.priceOf(product);
     }
 }
+
 

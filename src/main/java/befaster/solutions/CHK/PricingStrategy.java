@@ -1,6 +1,5 @@
 package befaster.solutions.CHK;
 
-public interface PriceStrategy {
+public interface PricingStrategy {
    int priceOf(int quantity, int price);
 }
-
