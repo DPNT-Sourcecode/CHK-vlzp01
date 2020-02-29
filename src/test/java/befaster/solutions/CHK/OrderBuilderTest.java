@@ -12,7 +12,9 @@ public class OrderBuilderTest {
     public void buildOrder() {
         Order order = OrderBuilder.createOrder("AA");
         assertThat(order.getProducts(), hasSize(1));
+        assertThat(order.getProducts().get(0).getSkuItem(), equalTo(SKUItem.A));
     }
 
 }
+
 
