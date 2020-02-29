@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class PriceCalculator {
 
-    private Product2DFreeBOffer basketOffer;
+    private ProductOffer basketOffer = new Product2EFreeBOffer();
 
     public Integer totalPrice(Set<Product> orderItems) {
         basketOffer.apply(orderItems);
@@ -19,3 +19,4 @@ public class PriceCalculator {
         return totalPrice;
     }
 }
+

@@ -1,6 +1,6 @@
 package befaster.solutions.CHK;
 
-import befaster.solutions.CHK.pricing.Product2DFreeBOffer;
+import befaster.solutions.CHK.pricing.Product2EFreeBOffer;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -11,9 +11,9 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Product2DFreeBOfferTest {
+public class Product2EFreeBOfferTest {
 
-    private Product2DFreeBOffer offer = new Product2DFreeBOffer();
+    private Product2EFreeBOffer offer = new Product2EFreeBOffer();
 
     @Test
     public void applyOffer() {

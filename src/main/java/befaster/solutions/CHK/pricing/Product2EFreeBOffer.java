@@ -6,7 +6,7 @@ import befaster.solutions.CHK.SKUItem;
 import java.util.Optional;
 import java.util.Set;
 
-public class Product2DFreeBOffer  implements ProductOffer {
+public class Product2EFreeBOffer implements ProductOffer {
     public void apply(Set<Product> orderItems) {
         Optional<Product> productEResult = findProduct(orderItems,SKUItem.E);
         if(productEResult.isPresent()) {

@@ -20,7 +20,8 @@ public class CheckoutSolutionTest {
     public void checkout_price() {
         assertThat(solution.checkout("ABCD"), equalTo(115));
         assertThat(solution.checkout("AAAABBBCD"), equalTo(130 + 50 + 45 + 30 + 20 + 15));
-
+        //with checkout 2nd version rules
         assertThat(solution.checkout("AAAAAAAAABBBCDEE"), equalTo(200+ 130 + 50 + 45 + 20 + 15 + 80));
     }
 }
+
