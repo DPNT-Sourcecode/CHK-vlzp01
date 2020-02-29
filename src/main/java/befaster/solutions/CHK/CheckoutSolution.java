@@ -1,11 +1,13 @@
 package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
+import com.google.common.base.Strings;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        if(skus == null) return -1;
+        if(Strings.isNullOrEmpty(skus)) return -1;
         return 0;
     }
 }
+
 

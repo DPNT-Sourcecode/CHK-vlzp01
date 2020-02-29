@@ -12,6 +12,9 @@ public class CheckoutSolutionTest {
     @Test
     public void checkout_illegal_SKU() {
         assertThat(solution.checkout(null),equalTo(-1));
+        assertThat(solution.checkout(""),equalTo(-1));
+
     }
 }
+
 
