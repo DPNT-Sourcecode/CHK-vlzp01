@@ -12,4 +12,3 @@ public class CheckoutSolution {
         return order.isPresent() ? order.get().totalValue() : -1;
     }
 }
-

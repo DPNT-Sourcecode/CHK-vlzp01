@@ -23,4 +23,3 @@ public class CheckoutSolutionTest {
         assertThat(solution.checkout("AAAABBBCD"), equalTo(130 + 50 + 45 + 30 + 20 + 15));
     }
 }
-
