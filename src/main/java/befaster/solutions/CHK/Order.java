@@ -1,6 +1,5 @@
 package befaster.solutions.CHK;
 
-import java.util.List;
 import java.util.Set;
 
 public class Order {
@@ -16,7 +15,7 @@ public class Order {
     }
 
     public Integer totalValue() {
-        PriceCalculator calculator = new PriceCalculator();
-        return calculator.totalPrice(products);
+        return new PriceCalculator().totalPrice(products);
     }
 }
+

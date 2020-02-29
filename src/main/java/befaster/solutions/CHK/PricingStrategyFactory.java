@@ -6,7 +6,13 @@ public class PricingStrategyFactory {
         PricingStrategy strategy;
         switch (skuItem) {
             case A:
-                strategy = new MultiPricingStrategy(new RegularPricingStrategy(),3,130);
+                strategy = new MultiPricingStrategy(
+                                new MultiPricingStrategy(
+                                        new RegularPricingStrategy(),
+                                        3,
+                                        130),
+                                5,
+                                200);
                 break;
             case B:
                 strategy = new MultiPricingStrategy(new RegularPricingStrategy(),2,45);
@@ -20,5 +26,6 @@ public class PricingStrategyFactory {
         return strategy;
     }
 }
+
 
 

@@ -20,5 +20,12 @@ public class PriceCalculatorTest {
         assertThat(calculator.totalPrice(products), equalTo(220));
     }
 
+    @Test
+    public void priceOf_R2Rule() {
+        Set<Product> products = Stream.of(new Product(SKUItem.A,9)).collect(Collectors.toSet());
+        assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50));
+    }
+
 }
+
 
