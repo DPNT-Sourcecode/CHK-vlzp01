@@ -10,10 +10,13 @@ public class MultiItemPriceCalculatorTest {
     @Test
     public void buildCompositeOrder() {
         MultiItemPriceCalculator calculator = new MultiItemPriceCalculator();
-        Product productA = new Product(SKUItem.A,2);
-        assertThat(calculator.priceOf(productA), equalTo(100));
+        Product productA = new Product(SKUItem.A,3);
+        assertThat(calculator.priceOf(productA), equalTo(130));
+        Product productB = new Product(SKUItem.B,4);
+        assertThat(calculator.priceOf(productA), equalTo(90));
     }
 
 
 
 }
+
