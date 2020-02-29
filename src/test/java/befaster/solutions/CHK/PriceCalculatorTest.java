@@ -17,7 +17,8 @@ public class PriceCalculatorTest {
     public void priceOf() {
         Set<Product> products = Stream.of(new Product(SKUItem.A,3),
                                     new Product(SKUItem.B,4)).collect(Collectors.toSet());
-        assertThat(calculator.totalPrice(products), equalTo(210));
+        assertThat(calculator.totalPrice(products), equalTo(220));
     }
 
 }
+
