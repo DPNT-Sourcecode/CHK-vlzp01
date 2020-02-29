@@ -6,12 +6,23 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multiset;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CheckoutSolution {
+
     public Integer checkout(String skus) {
         if(Strings.isNullOrEmpty(skus)) return -1;
-        HashMultiset<Character> productSet = HashMultiset.create();
+        Multiset<Character> productSet = HashMultiset.create();
         productSet.addAll(Lists.charactersOf(skus));
-        productSet.s
+        List<Product> products = productSet.stream()
+                .map(skuChar -> {
+                    return new Product(
+                            SKUItem.valueOf(skuChar),
+                            productSet.count(skuChar)
+                    );})
+                .collect(Collectors.toList());
         return 0;
     }
 }
+
