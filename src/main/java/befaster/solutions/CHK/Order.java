@@ -1,5 +1,8 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.pricing.PriceCalculator;
+
+import java.util.HashSet;
 import java.util.Set;
 
 public class Order {
@@ -15,6 +18,7 @@ public class Order {
     }
 
     public Integer totalValue() {
-        return new PriceCalculator().totalPrice(products);
+        return new PriceCalculator().totalPrice(new HashSet<>(products));
     }
 }
+

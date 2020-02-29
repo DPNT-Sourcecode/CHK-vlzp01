@@ -1,4 +1,6 @@
-package befaster.solutions.CHK;
+package befaster.solutions.CHK.pricing;
+
+import befaster.solutions.CHK.SKUItem;
 
 public class PricingStrategyFactory {
 
@@ -26,3 +28,4 @@ public class PricingStrategyFactory {
         return strategy;
     }
 }
+

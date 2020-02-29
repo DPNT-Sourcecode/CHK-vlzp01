@@ -19,6 +19,10 @@ public class Product {
         return quantity;
     }
 
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -32,3 +36,4 @@ public class Product {
         return Objects.hashCode(skuItem);
     }
 }
+

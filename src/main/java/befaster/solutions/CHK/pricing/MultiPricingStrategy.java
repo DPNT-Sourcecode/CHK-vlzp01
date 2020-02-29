@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+package befaster.solutions.CHK.pricing;
 
 public class MultiPricingStrategy implements PricingStrategy {
 
@@ -23,3 +23,4 @@ public class MultiPricingStrategy implements PricingStrategy {
         return totalPrice + strategy.priceOf(quantity,price);
     }
 }
+

@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+package befaster.solutions.CHK.pricing;
 
 public class RegularPricingStrategy implements PricingStrategy {
 
@@ -7,3 +7,4 @@ public class RegularPricingStrategy implements PricingStrategy {
         return quantity * price;
     }
 }
+

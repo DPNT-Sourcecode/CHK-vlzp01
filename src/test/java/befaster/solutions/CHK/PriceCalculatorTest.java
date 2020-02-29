@@ -1,5 +1,6 @@
 package befaster.solutions.CHK;
 
+import befaster.solutions.CHK.pricing.PriceCalculator;
 import org.junit.Test;
 
 import java.util.Set;
@@ -29,3 +30,4 @@ public class PriceCalculatorTest {
     }
 
 }
+
