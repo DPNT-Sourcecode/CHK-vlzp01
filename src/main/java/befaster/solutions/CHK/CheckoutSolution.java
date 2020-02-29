@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 public class CheckoutSolution {
 
     public Integer checkout(String skus) {
-        if(Strings.isNullOrEmpty(skus)) return -1;
         Order order = OrderBuilder.createOrder(skus);
         return order.totalValue();
     }
 }
+
