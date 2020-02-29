@@ -17,7 +17,8 @@ public class Order {
 
     public Integer totalValue() {
         return products.stream()
-                .mapToInt(Product::totalPrice)
+                .mapToInt(product -> product.getQuantity() * product.getSkuItem().getPrice())
                 .sum();
     }
 }
+

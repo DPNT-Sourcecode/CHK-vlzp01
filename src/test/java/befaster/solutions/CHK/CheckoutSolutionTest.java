@@ -17,6 +17,8 @@ public class CheckoutSolutionTest {
 
     @Test
     public void checkout_price() {
-        assertThat(solution.checkout("A"), equalTo(50));
+        assertThat(solution.checkout("AA"), equalTo(100));
+        assertThat(solution.checkout("ABCD"), equalTo(115));
     }
 }
+
