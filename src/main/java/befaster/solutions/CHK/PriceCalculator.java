@@ -6,4 +6,3 @@ public interface PriceCalculator {
         return product.getQuantity() * product.getSkuItem().getPrice();
     }
 }
-

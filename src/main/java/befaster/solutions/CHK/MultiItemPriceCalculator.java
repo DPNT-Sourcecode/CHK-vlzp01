@@ -18,6 +18,3 @@ public class MultiItemPriceCalculator implements PriceCalculator {
         return PriceCalculator.super.priceOf(product);
     }
 }
-
-
-
