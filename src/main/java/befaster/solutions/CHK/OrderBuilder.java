@@ -12,7 +12,8 @@ public class OrderBuilder {
     public static Order createOrder(String skus) {
         Multiset<Character> productSet = HashMultiset.create();
         productSet.addAll(Lists.charactersOf(skus));
-        List<Product> products = productSet.stream()
+        List<Product> products = productSet.elementSet()
+                .stream()
                 .map(skuChar -> {
                     return new Product(
                             SKUItem.valueOf(skuChar),
@@ -22,4 +23,5 @@ public class OrderBuilder {
         return new Order(products);
     }
 }
+
 
