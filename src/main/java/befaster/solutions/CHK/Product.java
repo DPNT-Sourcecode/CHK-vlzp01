@@ -19,10 +19,6 @@ public class Product {
         return quantity;
     }
 
-    public int totalPrice() {
-        return quantity * skuItem.getPrice();
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,3 +32,4 @@ public class Product {
         return Objects.hashCode(skuItem);
     }
 }
+
