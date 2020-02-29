@@ -2,6 +2,11 @@ package befaster.solutions.CHK;
 
 public class MultiPricingStrategy implements PricingStrategy {
 
+    private final PricingStrategy strategy;
+
+    public MultiPricingStrategy(PricingStrategy strategy) {
+        this.strategy = strategy;
+    }
 
     public int priceOf(Product product) {
         if(SKUItem.A.equals(product.getSkuItem())
@@ -23,3 +28,4 @@ public class MultiPricingStrategy implements PricingStrategy {
         return 0;
     }
 }
+
