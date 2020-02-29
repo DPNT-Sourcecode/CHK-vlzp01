@@ -15,6 +15,15 @@ public class OrderBuilderTest {
         assertThat(order.getProducts().get(0).getSkuItem(), equalTo(SKUItem.A));
     }
 
+    @Test
+    public void buildCompositeOrder() {
+        Order order = OrderBuilder.createOrder("AABADDCCC");
+        assertThat(order.getProducts(), hasSize(4));
+        //assertThat(order.getProducts().get(0).getSkuItem(), equalTo(SKUItem.A));
+    }
+
+
 }
+
 
 

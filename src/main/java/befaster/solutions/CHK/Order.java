@@ -13,5 +13,12 @@ public class Order {
     public List<Product> getProducts() {
         return products;
     }
+
+    public Integer totalValue() {
+        return products.stream()
+                .mapToInt(Product::totalPrice)
+                .sum();
+    }
 }
+
 

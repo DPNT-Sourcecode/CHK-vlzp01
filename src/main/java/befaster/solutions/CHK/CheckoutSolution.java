@@ -13,9 +13,10 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         if(Strings.isNullOrEmpty(skus)) return -1;
-
-        return 0;
+        Order order = OrderBuilder.createOrder(skus);
+        return order.totalValue();
     }
 }
+
 
 
