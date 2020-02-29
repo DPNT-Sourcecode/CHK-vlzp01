@@ -23,7 +23,12 @@ public class OrderBuilderTest {
                     .filter(product -> product.getSkuItem().equals(SKUItem.A))
                     .findFirst().get();
         assertThat(productA.getQuantity(), equalTo(3));
+        Product productB = order.getProducts().stream()
+                .filter(product -> product.getSkuItem().equals(SKUItem.B))
+                .findFirst().get();
+        assertThat(productB.getQuantity(), equalTo(1));
     }
 
 
 }
+
