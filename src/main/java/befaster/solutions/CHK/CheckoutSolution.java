@@ -14,8 +14,9 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         Optional<Order> order = OrderBuilder.createOrder(skus);
-        return order.ifPresent() ? order.get().totalValue() : -1;
+        return order.isPresent() ? order.get().totalValue() : -1;
     }
 }
+
 
 
