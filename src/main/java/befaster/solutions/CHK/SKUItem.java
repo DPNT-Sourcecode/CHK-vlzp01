@@ -6,7 +6,8 @@ public enum SKUItem {
     A("A",50),
     B("B",30),
     C("C",20),
-    D("D",15);
+    D("D",15),
+    E("E",40);
 
     private String name;
     private Integer price;

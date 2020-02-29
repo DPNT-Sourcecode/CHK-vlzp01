@@ -26,6 +26,3 @@ public class PricingStrategyFactory {
         return strategy;
     }
 }
-
-
-

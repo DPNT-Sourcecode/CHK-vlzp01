@@ -24,8 +24,8 @@ public class PriceCalculatorTest {
     public void priceOf_R2Rule() {
         Set<Product> products = Stream.of(new Product(SKUItem.A,9)).collect(Collectors.toSet());
         assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50));
+        products.add(new Product(SKUItem.E,1));
+        assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50 + 40));
     }
 
 }
-
-

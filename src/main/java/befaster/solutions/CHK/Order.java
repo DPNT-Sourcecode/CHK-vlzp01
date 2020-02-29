@@ -18,4 +18,3 @@ public class Order {
         return new PriceCalculator().totalPrice(products);
     }
 }
-
