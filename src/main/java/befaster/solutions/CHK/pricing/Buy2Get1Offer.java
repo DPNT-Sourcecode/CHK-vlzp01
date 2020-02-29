@@ -27,4 +27,3 @@ public class Product2EFreeBOffer implements ProductOffer {
         }
     }
 }
-
