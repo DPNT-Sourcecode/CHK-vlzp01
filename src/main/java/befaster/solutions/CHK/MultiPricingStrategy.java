@@ -3,9 +3,14 @@ package befaster.solutions.CHK;
 public class MultiPricingStrategy implements PricingStrategy {
 
     private final PricingStrategy strategy;
+    private final int discountThreshold;
+    private final int discountPrice;
 
-    public MultiPricingStrategy(PricingStrategy strategy) {
+
+    public MultiPricingStrategy(PricingStrategy strategy,int discountThreshold,int discountPrice) {
         this.strategy = strategy;
+        this.discountThreshold = discountThreshold;
+        this.discountPrice = discountPrice;
     }
 
     public int priceOf(Product product) {
@@ -28,4 +33,5 @@ public class MultiPricingStrategy implements PricingStrategy {
         return 0;
     }
 }
+
 
