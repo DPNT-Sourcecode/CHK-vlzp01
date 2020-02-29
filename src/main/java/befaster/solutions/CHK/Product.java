@@ -32,4 +32,3 @@ public class Product {
         return Objects.hashCode(skuItem);
     }
 }
-
