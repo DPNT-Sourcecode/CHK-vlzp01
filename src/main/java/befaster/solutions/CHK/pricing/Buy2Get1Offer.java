@@ -17,12 +17,12 @@ public class Buy2Get1Offer implements ProductOffer {
     public void apply(Set<Product> orderItems) {
         Optional<Product> productResult = findProduct(orderItems,skuItem);
         if(productResult.isPresent()) {
-            Product productE = productResult.get();
-           if( productE.getQuantity() >= 3) {
-                   int productBFreeCount = productE.getQuantity() / 3;
-                    productE.setQuantity(productBFreeCount);
-           }
+            Product product = productResult.get();
+            if( product.getQuantity() >= 3) {
+               product.setQuantity(product.getQuantity() - product.getQuantity() / 3);
+            }
         }
     }
 }
+
 
