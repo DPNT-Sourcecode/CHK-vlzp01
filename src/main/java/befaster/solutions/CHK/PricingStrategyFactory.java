@@ -10,6 +10,7 @@ public class PricingStrategyFactory {
                 break;
             case B:
                 strategy = new MultiPricingStrategy(new RegularPricingStrategy(),2,45);
+                break;
             case C:
             case D:
             default:
@@ -19,4 +20,5 @@ public class PricingStrategyFactory {
         return strategy;
     }
 }
+
 
