@@ -2,7 +2,7 @@ package befaster.solutions.CHK;
 
 public class MultiPricingStrategy implements PricingStrategy {
 
-    @Override
+
     public int priceOf(Product product) {
         if(SKUItem.A.equals(product.getSkuItem())
             && product.getQuantity() >= 3 ) {
@@ -15,8 +15,11 @@ public class MultiPricingStrategy implements PricingStrategy {
             int regularQuantity = product.getQuantity() % 2 ;
             return (discountQuantity * 45) + (regularQuantity * SKUItem.B.getPrice());
         }
-        return PriceCalculator.super.priceOf(product);
+        return 0;
+    }
+
+    @Override
+    public int priceOf(int quantity, int price) {
+        return 0;
     }
 }
-
-

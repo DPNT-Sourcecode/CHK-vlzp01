@@ -16,9 +16,8 @@ public class Order {
     }
 
     public Integer totalValue() {
-        MultiItemPriceCalculator calculator = new MultiItemPriceCalculator();
-        return products.stream()
-                .mapToInt(calculator::priceOf)
-                .sum();
+        PriceCalculator calculator = new PriceCalculator();
+        return calculator.totalPrice(products);
     }
 }
+
