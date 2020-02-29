@@ -1,5 +1,7 @@
 package befaster.solutions.CHK;
 
+import java.util.Arrays;
+
 public enum SKUItem {
     A("A",50),
     B("B",30),
@@ -15,7 +17,12 @@ public enum SKUItem {
     }
 
     public static SKUItem valueOf(Character skuChar) {
-        return null;
+        for(SKUItem item : SKUItem.values()){
+            if(item.name.equals(skuChar.toString())) {
+                return item;
+            }
+        }
+        throw new IllegalArgumentException("InValid SKU item");
     }
 
     public String getName() {
@@ -26,4 +33,5 @@ public enum SKUItem {
         return price;
     }
 }
+
 
