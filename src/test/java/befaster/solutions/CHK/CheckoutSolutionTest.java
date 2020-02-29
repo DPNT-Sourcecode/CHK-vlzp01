@@ -13,6 +13,7 @@ public class CheckoutSolutionTest {
     public void checkout_illegal_SKU() {
         assertThat(solution.checkout(null),equalTo(-1));
         assertThat(solution.checkout(""),equalTo(-1));
+        assertThat(solution.checkout("XDG"),equalTo(-1));
     }
 
     @Test
@@ -21,3 +22,4 @@ public class CheckoutSolutionTest {
         assertThat(solution.checkout("ABCD"), equalTo(115));
     }
 }
+
