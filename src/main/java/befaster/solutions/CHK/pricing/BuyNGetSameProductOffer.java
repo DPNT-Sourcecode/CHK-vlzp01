@@ -26,4 +26,3 @@ public class BuyNGetSameProductOffer implements ProductOffer {
         }
     }
 }
-

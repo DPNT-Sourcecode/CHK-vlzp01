@@ -21,9 +21,11 @@ public class PriceCalculator {
     }
 
     private List<ProductOffer> currentOffers() {
-        return Arrays.asList(new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B,2),
-                                new BuyNGetSameProductOffer(SKUItem.F,2));
+        return Arrays.asList(
+                new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B,2),
+                new BuyNGetSameProductOffer(SKUItem.F,2),
+                new BuyNGetOtherProductOffer(SKUItem.N,SKUItem.M,3),
+                new BuyNGetOtherProductOffer(SKUItem.R,SKUItem.Q,3),
+                new BuyNGetSameProductOffer(SKUItem.U,3));
     }
 }
-
-

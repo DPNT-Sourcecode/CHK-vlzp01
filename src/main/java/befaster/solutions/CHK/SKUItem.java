@@ -3,13 +3,13 @@ package befaster.solutions.CHK;
 import java.util.Arrays;
 
 public enum SKUItem {
-    A("A",50),
-    B("B",30),
-    C("C",20),
-    D("D",15),
-    E("E",40),
-    F("F",10);
-
+    A("A",50), B("B",30), C("C",20), D("D",15),
+    E("E",40), F("F",10), G("G",20),H("H",10),
+    I("I",35),J("J",60),K("K",80),L("L",90),
+    M("M",15),N("N",40),O("O",10),P("P",50),
+    Q("Q",30),R("R",50),S("S",30),T("T",20),
+    U("U",40),V("V",50),W("W",20),X("X",90),
+    Y("Y",10),Z("Z",50);
     private String name;
     private Integer price;
 
