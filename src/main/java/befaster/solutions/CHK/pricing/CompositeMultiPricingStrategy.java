@@ -19,7 +19,8 @@ public class CompositeMultiPricingStrategy {
 
     public int priceOf(List<Product> products) {
         int totalPrice = 0;
-        
+
         return totalPrice;
     }
 }
+
