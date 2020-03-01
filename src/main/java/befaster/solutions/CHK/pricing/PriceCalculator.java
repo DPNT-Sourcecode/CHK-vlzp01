@@ -10,8 +10,11 @@ import java.util.Set;
 public class PriceCalculator {
 
     public Integer totalPrice(Set<Product> orderItems) {
+        // apply basket offers
         currentOffers().forEach(offer -> offer.apply(orderItems));
         int totalPrice = 0;
+        // find price for non composite items
+        List<Product> nonCompositeProducts =
         for(Product orderItem : orderItems) {
             totalPrice += PricingStrategyFactory
                     .getStrategy(orderItem.getSkuItem())
@@ -28,4 +31,9 @@ public class PriceCalculator {
                 new BuyNGetOtherProductOffer(SKUItem.R,SKUItem.Q,3),
                 new BuyNGetSameProductOffer(SKUItem.U,3));
     }
+
+    private Set<SKUItem> compositeProducts() {
+        
+    }
 }
+
