@@ -29,4 +29,15 @@ public class PriceCalculatorTest {
         assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50 + 40));
     }
 
+    @Test
+    public void priceOf_R5Rule() {
+        Set<Product> products = Stream.of(new Product(SKUItem.A,9)).collect(Collectors.toSet());
+        assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50));
+        products.add(new Product(SKUItem.E,1));
+        products.add(new Product(SKUItem.K,2));
+        products.add(new Product(SKUItem.X,3));
+        assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50 + 40 + 120 + 45));
+    }
+
 }
+
