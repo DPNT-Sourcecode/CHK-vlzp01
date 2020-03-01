@@ -33,7 +33,8 @@ public class OrderBuilderTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void buildInvalidOrder() {
-        OrderBuilder.createOrder("XYZ");
+        OrderBuilder.createOrder("xyz");
     }
 
 }
+

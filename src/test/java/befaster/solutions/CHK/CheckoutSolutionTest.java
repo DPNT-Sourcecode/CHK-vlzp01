@@ -13,7 +13,6 @@ public class CheckoutSolutionTest {
     public void checkout_illegal_SKU() {
         assertThat(solution.checkout(null),equalTo(0));
         assertThat(solution.checkout(""),equalTo(0));
-        assertThat(solution.checkout("XDG"),equalTo(-1));
     }
 
     @Test
@@ -26,3 +25,4 @@ public class CheckoutSolutionTest {
         assertThat(solution.checkout("AAAAAAAAABBBCDEEFFF"), equalTo(200+ 130 + 50 + 45 + 20 + 15 + 80 + 20));
     }
 }
+
