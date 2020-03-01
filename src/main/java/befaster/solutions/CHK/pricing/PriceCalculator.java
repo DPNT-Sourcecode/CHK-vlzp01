@@ -27,7 +27,7 @@ public class PriceCalculator {
         }
         // find price for composite items
         Predicate<Product> compositeSKUs = product -> compositeSKUItems.contains(product.getSkuItem());
-        List<Product> compositeProducts = filterProducts(orderItems,nonCompositeSKUs);
+        List<Product> compositeProducts = filterProducts(orderItems,compositeSKUs);
         CompositeMultiPricingStrategy strategy = new CompositeMultiPricingStrategy(new RegularPricingStrategy(),3,45);
         totalPrice += strategy.priceOf(compositeProducts);
         return totalPrice;
@@ -53,5 +53,3 @@ public class PriceCalculator {
 
     }
 }
-
-
