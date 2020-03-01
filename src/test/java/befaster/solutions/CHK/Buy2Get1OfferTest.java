@@ -29,4 +29,3 @@ public class Buy2Get1OfferTest {
     }
 
 }
-

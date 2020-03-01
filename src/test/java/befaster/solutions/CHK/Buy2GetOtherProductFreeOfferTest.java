@@ -38,4 +38,3 @@ public class Buy2GetOtherProductFreeOfferTest {
     }
 
 }
-

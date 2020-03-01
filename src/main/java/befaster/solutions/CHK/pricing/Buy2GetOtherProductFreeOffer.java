@@ -35,4 +35,3 @@ public class Buy2GetOtherProductFreeOffer implements ProductOffer {
         }
     }
 }
-

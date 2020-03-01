@@ -24,5 +24,3 @@ public class Buy2Get1Offer implements ProductOffer {
         }
     }
 }
-
-
