@@ -2,6 +2,7 @@ package befaster.solutions.CHK.pricing;
 
 import befaster.solutions.CHK.Product;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class CompositeMultiPricingStrategy {
@@ -19,8 +20,12 @@ public class CompositeMultiPricingStrategy {
 
     public int priceOf(List<Product> products) {
         int totalPrice = 0;
-
+        //sort in reverse pricing order,so that the order items grouping occurs in top priced items first
+        products.sort(Comparator.comparing(product -> {
+            return product.getSkuItem().getPrice();
+        }));
         return totalPrice;
     }
 }
+
 
