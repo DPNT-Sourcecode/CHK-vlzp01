@@ -31,10 +31,12 @@ public class OrderBuilderTest {
         assertThat(productB.getQuantity(), equalTo(1));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void buildInvalidOrder() {
-        OrderBuilder.createOrder("xyz");
+        Optional<Order> order = OrderBuilder.createOrder("xyz");
+        assertThat(order.isPresent(), equalTo(false));
     }
 
 }
+
 
