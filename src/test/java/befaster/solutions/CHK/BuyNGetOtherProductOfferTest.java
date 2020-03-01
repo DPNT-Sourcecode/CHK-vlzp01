@@ -1,6 +1,6 @@
 package befaster.solutions.CHK;
 
-import befaster.solutions.CHK.pricing.Buy2GetOtherProductFreeOffer;
+import befaster.solutions.CHK.pricing.BuyNGetOtherProductOffer;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -11,9 +11,9 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Buy2GetOtherProductFreeOfferTest {
+public class BuyNGetOtherProductOfferTest {
 
-    private Buy2GetOtherProductFreeOffer offer = new Buy2GetOtherProductFreeOffer(SKUItem.E,SKUItem.B);
+    private BuyNGetOtherProductOffer offer = new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B);
 
     @Test
     public void applyOffer() {

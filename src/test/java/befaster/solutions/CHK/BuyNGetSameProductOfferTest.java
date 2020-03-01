@@ -1,9 +1,8 @@
 package befaster.solutions.CHK;
 
-import befaster.solutions.CHK.pricing.Buy2Get1Offer;
+import befaster.solutions.CHK.pricing.BuyNGetSameProductOffer;
 import org.junit.Test;
 
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -11,9 +10,9 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Buy2Get1OfferTest {
+public class BuyNGetSameProductOfferTest {
 
-    private Buy2Get1Offer offer = new Buy2Get1Offer(SKUItem.F);
+    private BuyNGetSameProductOffer offer = new BuyNGetSameProductOffer(SKUItem.F,2);
 
     @Test
     public void applyOffer() {
@@ -29,3 +28,4 @@ public class Buy2Get1OfferTest {
     }
 
 }
+

@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class PriceCalculator {
 
-    private ProductOffer basketOffer = new Buy2GetOtherProductFreeOffer(SKUItem.E,SKUItem.B);
+    private ProductOffer basketOffer = new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B);
 
     public Integer totalPrice(Set<Product> orderItems) {
         currentOffers().forEach(offer -> offer.apply(orderItems));
@@ -23,7 +23,8 @@ public class PriceCalculator {
     }
 
     private List<ProductOffer> currentOffers() {
-        return Arrays.asList(new Buy2GetOtherProductFreeOffer(SKUItem.E,SKUItem.B),
-                                new Buy2Get1Offer(SKUItem.F));
+        return Arrays.asList(new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B),
+                                new BuyNGetSameProductOffer(SKUItem.F));
     }
 }
+

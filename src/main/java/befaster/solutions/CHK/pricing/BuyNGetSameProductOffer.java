@@ -6,11 +6,13 @@ import befaster.solutions.CHK.SKUItem;
 import java.util.Optional;
 import java.util.Set;
 
-public class Buy2Get1Offer implements ProductOffer {
+public class BuyNGetSameProductOffer implements ProductOffer {
 
     private final SKUItem skuItem;
+    private final int discountThreshold;
 
-    public Buy2Get1Offer(SKUItem skuItem) {
+    public BuyNGetSameProductOffer(SKUItem skuItem, int discountThreshold) {
+        this.discountThreshold = discountThreshold;
         this.skuItem = skuItem;
     }
 
@@ -18,9 +20,10 @@ public class Buy2Get1Offer implements ProductOffer {
         Optional<Product> productResult = findProduct(orderItems,skuItem);
         if(productResult.isPresent()) {
             Product product = productResult.get();
-            if( product.getQuantity() >= 3) {
-               product.setQuantity(product.getQuantity() - product.getQuantity() / 3);
+            if( product.getQuantity() >= (discountThreshold + 1)) {
+               product.setQuantity(product.getQuantity() - product.getQuantity() / (discountThreshold + 1));
             }
         }
     }
 }
+
