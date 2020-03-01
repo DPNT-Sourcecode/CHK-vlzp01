@@ -21,7 +21,7 @@ public class PricingStrategyFactory {
                             new MultiPricingStrategy(new RegularPricingStrategy(), 5, 45),
                             10,
                             80));
-        map.put(SKUItem.K, new MultiPricingStrategy(new RegularPricingStrategy(),2,150));
+        map.put(SKUItem.K, new MultiPricingStrategy(new RegularPricingStrategy(),2,120));
         map.put(SKUItem.P, new MultiPricingStrategy(new RegularPricingStrategy(),5,200));
         map.put(SKUItem.Q, new MultiPricingStrategy(new RegularPricingStrategy(),3,80));
         map.put(SKUItem.V, new MultiPricingStrategy(
