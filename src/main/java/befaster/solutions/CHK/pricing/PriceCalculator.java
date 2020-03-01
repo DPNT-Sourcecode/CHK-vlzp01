@@ -1,12 +1,13 @@
 package befaster.solutions.CHK.pricing;
 
 import befaster.solutions.CHK.Product;
+import befaster.solutions.CHK.SKUItem;
 
 import java.util.Set;
 
 public class PriceCalculator {
 
-    private ProductOffer basketOffer = new Product2EFreeBOffer();
+    private ProductOffer basketOffer = new Buy2GetOtherProductFreeOffer(SKUItem.E,SKUItem.B);
 
     public Integer totalPrice(Set<Product> orderItems) {
         basketOffer.apply(orderItems);
@@ -19,3 +20,4 @@ public class PriceCalculator {
         return totalPrice;
     }
 }
+

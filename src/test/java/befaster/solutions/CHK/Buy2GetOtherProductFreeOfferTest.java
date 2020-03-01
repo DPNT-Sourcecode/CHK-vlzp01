@@ -1,6 +1,6 @@
 package befaster.solutions.CHK;
 
-import befaster.solutions.CHK.pricing.Product2EFreeBOffer;
+import befaster.solutions.CHK.pricing.Buy2GetOtherProductFreeOffer;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -11,9 +11,9 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Product2EFreeBOfferTest {
+public class Buy2GetOtherProductFreeOfferTest {
 
-    private Product2EFreeBOffer offer = new Product2EFreeBOffer();
+    private Buy2GetOtherProductFreeOffer offer = new Buy2GetOtherProductFreeOffer(SKUItem.E,SKUItem.B);
 
     @Test
     public void applyOffer() {
@@ -38,3 +38,4 @@ public class Product2EFreeBOfferTest {
     }
 
 }
+
