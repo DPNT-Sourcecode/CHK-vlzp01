@@ -9,8 +9,6 @@ import java.util.Set;
 
 public class PriceCalculator {
 
-    private ProductOffer basketOffer = new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B);
-
     public Integer totalPrice(Set<Product> orderItems) {
         currentOffers().forEach(offer -> offer.apply(orderItems));
         int totalPrice = 0;
@@ -23,8 +21,9 @@ public class PriceCalculator {
     }
 
     private List<ProductOffer> currentOffers() {
-        return Arrays.asList(new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B),
-                                new BuyNGetSameProductOffer(SKUItem.F));
+        return Arrays.asList(new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B,2),
+                                new BuyNGetSameProductOffer(SKUItem.F,2));
     }
 }
+
 

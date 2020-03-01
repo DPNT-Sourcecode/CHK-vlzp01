@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class BuyNGetOtherProductOfferTest {
 
-    private BuyNGetOtherProductOffer offer = new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B);
+    private BuyNGetOtherProductOffer offer = new BuyNGetOtherProductOffer(SKUItem.E,SKUItem.B,2);
 
     @Test
     public void applyOffer() {
@@ -38,3 +38,4 @@ public class BuyNGetOtherProductOfferTest {
     }
 
 }
+
