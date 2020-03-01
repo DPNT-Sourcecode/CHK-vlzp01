@@ -36,4 +36,11 @@ public class PriceCalculatorTest {
         assertThat(calculator.totalPrice(products), equalTo(200 + 130 + 50 + 40 + 120 + 45));
     }
 
+    @Test
+    public void failedTests() {
+        Set<Product> products = Stream.of(new Product(SKUItem.Y,1)).collect(Collectors.toSet());
+        assertThat(calculator.totalPrice(products), equalTo(20));
+    }
+
 }
+
