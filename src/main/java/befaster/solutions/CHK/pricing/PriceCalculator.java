@@ -15,26 +15,25 @@ public class PriceCalculator {
     public Integer totalPrice(Set<Product> orderItems) {
         // apply basket offers
         currentOffers().forEach(offer -> offer.apply(orderItems));
-        int totalPrice = 0;
         EnumSet<SKUItem> compositeSKUItems = compositeSKUItems();
         // find price for non composite items
-        totalPrice += priceOfNonCompositeItems(orderItems, totalPrice, compositeSKUItems);
+        int nonCompositeItemsPrice = priceOfNonCompositeItems(orderItems, compositeSKUItems);
         // find price for composite items
-        totalPrice += priceOfCompositeItems(orderItems, totalPrice, compositeSKUItems);
-        return totalPrice;
+        int compositeItemsPrice = priceOfCompositeItems(orderItems, compositeSKUItems);
+        return nonCompositeItemsPrice + compositeItemsPrice;
     }
 
-    private int priceOfCompositeItems(Set<Product> orderItems, int totalPrice, EnumSet<SKUItem> compositeSKUItems) {
+    private int priceOfCompositeItems(Set<Product> orderItems, EnumSet<SKUItem> compositeSKUItems) {
         Predicate<Product> compositeSKUs = product -> compositeSKUItems.contains(product.getSkuItem());
         List<Product> compositeProducts = filterProducts(orderItems,compositeSKUs);
         CompositeMultiPricingStrategy strategy = new CompositeMultiPricingStrategy(new RegularPricingStrategy(),3,45);
-        totalPrice += strategy.priceOf(compositeProducts);
-        return totalPrice;
+        return strategy.priceOf(compositeProducts);
     }
 
-    private int priceOfNonCompositeItems(Set<Product> orderItems, int totalPrice, EnumSet<SKUItem> compositeSKUItems) {
+    private int priceOfNonCompositeItems(Set<Product> orderItems,  EnumSet<SKUItem> compositeSKUItems) {
         Predicate<Product> nonCompositeSKUs = product -> ! compositeSKUItems.contains(product.getSkuItem());
         List<Product> nonCompositeProducts = filterProducts(orderItems,nonCompositeSKUs);
+        int totalPrice = 0;
         for(Product orderItem : nonCompositeProducts) {
             totalPrice += PricingStrategyFactory
                     .getStrategy(orderItem.getSkuItem())
@@ -63,4 +62,5 @@ public class PriceCalculator {
 
     }
 }
+
 
